@@ -18,4 +18,20 @@ body {
     padding:50px;
     margin:auto;
     display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content:space-around;
+}
+
+.header{
+
+  text-align: center;
+  margin-top: 100px;
+   
+}
+.dateTime{
+  padding-top:30px
+}
+
+.dateTime h5{
+  font-family: 'Roboto'
 }
