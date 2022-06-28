@@ -7,8 +7,8 @@ const DateTime = () => {
   return (
     <div className='dateTime'>
     
-       <h5>{moment().format('dddd, MMMM Do YYYY')}</h5> 
-       <h5>{moment().format('LTS')}</h5>
+       <h3>{moment().format('dddd, MMMM Do YYYY')}</h3> 
+       <h4>{moment().format('LTS')}</h4>
     </div>
   )
 }
