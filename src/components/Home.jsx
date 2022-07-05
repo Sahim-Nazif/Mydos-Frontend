@@ -8,15 +8,15 @@ const Home = () => {
   return (
 
     <>
-
       <Header />
       <div className='container'>
       <DosForms/>
+     
       
        <MyDos />
-     
-     
+       
       </div>
+   
     </>
 
   )

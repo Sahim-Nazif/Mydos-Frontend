@@ -12,18 +12,24 @@ body {
   background-color: #393939;
   color: #fff;
   line-height: 1.6;
-
+  align-items: center
+ 
 }
 
-.container {
+/* .container {
   padding: 50px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
   align-items: center;
-
-
+  
+ 
+} */
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .vertical-line {
@@ -37,7 +43,7 @@ body {
 .header {
 
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
 
@@ -56,31 +62,27 @@ body {
 
 .form-input {
 
-  background-color: #fff;
-  padding: 20px;
-
-
+  position:relative;
+  top:200px;
+  margin:10px;
+  width: 100%;
+  
 }
 
 .form-input input {
 
   background: #DCDCDC;
-  width: 100%;
-  padding: 10px;
+  width:100%;
+  padding: 20px;
   border-radius: 4px;
-
-
+  outline: 0;
+  
 }
+.form-input h4{
 
-/* .card {
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  padding: 50px 40px;
-  margin: 20px 10px;
-  position:relative;
-} */
-
+  font-size:small;
+  font-weight:lighter
+}
 .card {
   position: relative;
   background: linear-gradient(222.69deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 0.01%, rgba(255, 255, 255, 0.7) 52.6%, rgba(255, 255, 255, 0.343) 100%, rgba(255, 255, 255, 0.7) 100%);
@@ -89,8 +91,7 @@ body {
   height: 60%;
   margin: 20px 10px;
   padding: 50px 40px;
-
-
+  
 }
 
 .card-line {
@@ -116,3 +117,27 @@ body {
   top:2px;
   right:25px;
 }
+.calendarBtn{
+  background: #6C9AA8;
+  color:#fff;
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  outline: 0;
+  position: absolute;
+  border-style: none;
+  margin-top:20px;
+  text-transform: uppercase;
+}
+.hide {
+display: block;
+}
+  
+.submitBtn {
+  position: absolute;
+  margin-top: 266px;
+  width: 57.5%;
+  padding: 0px 10px;
+}
+  
+

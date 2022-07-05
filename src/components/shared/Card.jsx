@@ -8,7 +8,7 @@ const Card = ({children, reverse}) => {
 
   return (
     <div className='card'>{children}
-        <div className='card-line'>{children}</div>
+        <div className='card-line'></div>
         <div className='icons'>
         <FontAwesomeIcon icon={faClose} />
         <div className='icon-edit'>
