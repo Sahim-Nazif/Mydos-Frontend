@@ -1,46 +1,20 @@
 import React, {useState} from 'react'
-import Card from './shared/Card'
-import Calendar from 'react-calendar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarPlus } from '@fortawesome/free-solid-svg-icons';
-
+import DatePicker from "react-datepicker";
 
 const DosForms = () => {
 
-   const [date, setDate]=useState(new Date())
-   const [showCal, setShowCal]=useState(false)
+   const [startDate, setStartDate] = useState(new Date());
 
-
-   const displayCalendar=()=>{
-      return ( 
-
-         setShowCal(true)
-       
-         
-      )
-      }
-   const displayCalBtn=()=>{
+   const submitBtn=()=>{
 
       return (
          <div>
-           <button className='calendarBtn' onClick={()=>displayCalendar()}  >
-          Calendar <FontAwesomeIcon icon={faCalendarPlus}
-       
-           style={{ cursor: 'pointer', color: '#ffffff' }} /> </button>
+           <button className='calendarBtn'  >Submit</button>
+
          </div>
       )
    }
-   const submitBtn=()=>{
-      return( 
-         <div>
-         <button className='calendarBtn'  
-         
-         style={{ cursor: 'pointer', color: '#ffffff' }} >Submit </button>
-       </div>
-      )
     
-   }       
-
    return (
 
          <>
@@ -48,14 +22,12 @@ const DosForms = () => {
             
             <input placeholder='Your Dos' />
           
-            {displayCalBtn()}
-            {showCal && <Calendar onChange={setDate} value={date} />}
+            {submitBtn()}
+            {<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
+             />}
        
          </div>
-         <div className='submitBtn'>
-         {submitBtn()}
-         </div>
-   
+      
         </>
    )
 
