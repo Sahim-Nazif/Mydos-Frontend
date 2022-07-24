@@ -24,8 +24,9 @@ const DosForms = () => {
           
             {submitBtn()}
             {<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
+           
              />}
-       
+        {console.log(startDate)}
          </div>
       
         </>
