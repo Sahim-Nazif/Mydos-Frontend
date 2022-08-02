@@ -1,6 +1,6 @@
 export const addMyDos=mydos=>{
 
-    return fetch(`${process.env.REACT_APP_API_URL}`, {
+    return fetch(`${process.env.REACT_APP_API_URI}`, {
         method: 'POST',
         headers:{
             Accept:'application/json',
@@ -19,7 +19,7 @@ export const addMyDos=mydos=>{
 
 export const getMyDos=()=>{
 
-    return fetch(`${process.env.REACT_APP_API_URL/list}` ,{
+    return fetch(`${process.env.REACT_APP_API_URI}/list` ,{
         method:'GET'
     })
     .then(response=>{

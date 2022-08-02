@@ -45,7 +45,7 @@ body {
 .header {
 
   text-align: center;
-  margin-top: 50px;
+  margin-top: 120px;
 
 }
 
@@ -65,7 +65,7 @@ body {
 .form-input {
 
   position:relative;
-  top:250px;
+  top:50px;
   margin:10px;
   width: 100%;
   
