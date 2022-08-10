@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faClose ,faPencil} from '@fortawesome/free-solid-svg-icons'
+import moment from 'moment'
 
 
 const Card = ({children, reverse, todo}) => {
@@ -11,7 +12,15 @@ const Card = ({children, reverse, todo}) => {
          
        <div className='card'>{children}
          
-        <div className='card-line'>   {todo.todo}</div> 
+        <div className='card-line'> 
+        <p className='todo'>
+        {todo.todo}
+        </p>
+        <p className='date'>
+          
+        {moment(todo.createdAt).fromNow()}
+        </p>
+       </div> 
      
         <div className='icons'>
         <FontAwesomeIcon icon={faClose} />

@@ -142,4 +142,10 @@ display: block;
   padding: 0px 10px;
 }
   
-
+.todo {
+  padding: 2px
+}
+.date {
+    padding:2px;
+    
+}
