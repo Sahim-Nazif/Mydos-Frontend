@@ -1,21 +1,27 @@
-export const addMyDos=mydos=>{
+export const addMyDos = (myDos) => {
 
     return fetch(`${process.env.REACT_APP_API_URI}`, {
+
         method: 'POST',
-        headers:{
-            Accept:'application/json',
-            'Content-Type':'application/json',
-           
+        headers: {
+
+            Accept: 'application/json'
+            
         },
-        body:mydos
-    })
-     .then(response =>{
-        return response.json()
-     })
-      .catch(err=>{
-        console.log(err)
-      })
+
+        body: myDos
+    }).
+        then(response => {
+
+            return response.json()
+        }).catch(err => {
+            console.log(err)
+        })
+
+
+
 }
+
 
 export const getMyDos=()=>{
 

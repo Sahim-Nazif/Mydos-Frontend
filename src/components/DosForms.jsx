@@ -9,15 +9,18 @@ const DosForms = () => {
    const [values, setValues]= useState ({
 
       todo:'',
-      error:''
+      error:'',
+      formData:''
    })
    const {
       todo,
-      error
+      error,
+      formData
+
    }=values
 
    const init= ()=>{
-      setValues({...values})
+      setValues({...values, formData: new FormData()})
 
    }
 
@@ -26,18 +29,42 @@ const DosForms = () => {
    },[])
 
    const handleChange=name=>event=>{
-        
+      const value=event.target.value 
+      formData.set(name, value )
       setValues({...values, error:false, [name]:event.target.value})
       console.log(event.target.value)
-      console.log(values)
+      
    }
 
- 
-   const clickSubmit=event=>{
+   const clickSubmit = event => {
+
+      event.preventDefault()
+
+      setValues({ ...values, error: ''})
+
+      addMyDos( formData)
+          .then(data => {
+
+              if (data.error) {
+
+                  setValues({ ...values, error: data.error })
+              } else {
+
+                  setValues({
+
+                      ...values,
+                      todo: ''
+                                        
+                  })
+              }
+          })
+
+  }
+   // const clickSubmit=event=>{
 
    //    event.preventDefault()
    //    setValues({...values, error:''})
-   //    addMyDos().then(data=>{
+   //    addMyDos(formData).then(data=>{
    //       if (data.error) {
    //          setValues({...values, error:data.error})
    //       } else {
@@ -45,18 +72,18 @@ const DosForms = () => {
    //         console.log(data)
    //    }
    //  } )
-   event.preventDefault();
-   axios.post(`${process.env.REACT_APP_API_URI}`,
-      {todo},{
-         headers:{
-            'Content-Type':'application/json'
-         }
-      }).then(response=>{
-         setValues({...values, todo:''})
-      }).catch(error=>{
-         console.log(error.response)
-      })
-   }
+   // //event.preventDefault();
+   // // axios.post(`${process.env.REACT_APP_API_URI}`,
+   // //    {todo},{
+   // //       headers:{
+   // //          'Content-Type':'application/json'
+   // //       }
+   // //    }).then(response=>{
+   // //       setValues({...values, todo:''})
+   // //    }).catch(error=>{
+   // //       console.log(error.response)
+   // //    })
+   // }
 
 
     
