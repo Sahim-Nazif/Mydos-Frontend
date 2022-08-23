@@ -56,37 +56,14 @@ const DosForms = () => {
                       todo: ''
                                         
                   })
+        
               }
           })
 
-  }
-   // const clickSubmit=event=>{
-
-   //    event.preventDefault()
-   //    setValues({...values, error:''})
-   //    addMyDos(formData).then(data=>{
-   //       if (data.error) {
-   //          setValues({...values, error:data.error})
-   //       } else {
-   //         setValues({...values, todo:''})
-   //         console.log(data)
-   //    }
-   //  } )
-   // //event.preventDefault();
-   // // axios.post(`${process.env.REACT_APP_API_URI}`,
-   // //    {todo},{
-   // //       headers:{
-   // //          'Content-Type':'application/json'
-   // //       }
-   // //    }).then(response=>{
-   // //       setValues({...values, todo:''})
-   // //    }).catch(error=>{
-   // //       console.log(error.response)
-   // //    })
-   // }
-
-
     
+
+  }
+     
    return (
 
          <>

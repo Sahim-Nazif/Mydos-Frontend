@@ -3,6 +3,7 @@ import Card from './shared/Card'
 import { getMyDos } from './core/apiCore'
 import { faTentArrowDownToLine } from '@fortawesome/free-solid-svg-icons'
 
+
 const MyDos = () => {
     
   const [mydos, setMyDos]=useState([])
@@ -19,6 +20,8 @@ const MyDos = () => {
       }
     })
   }
+
+
   useEffect(()=>{
     init()
   },[])

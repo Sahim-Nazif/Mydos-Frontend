@@ -33,3 +33,16 @@ export const getMyDos=()=>{
     })
     .catch(err=>console.log(err))
 }
+
+export const deleteMyDos=(id)=>{
+
+    return fetch(`${process.env.REACT_APP_API_URI}/delete/${id}`, {
+        method:'DELETE',
+            headers: {
+                Accept:'application/json',
+                'Content-Type': 'application/json'
+            },
+    }).then(response=>{
+        return response.json()
+    }).catch(err=>console.log(err))
+}
